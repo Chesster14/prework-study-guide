@@ -12,41 +12,35 @@
     </header>
 
     <main>
-        <section id="html">
-            <h2>HTML</h2>
-            <ul>
-                <li>HTML structures content on the web.</li>
-                <li>HTML elements define different parts of a webpage.</li>
+        <section>
+            <h2>Topics Covered</h2>
+            <ul id="topics-list">
+                <li>HTML: Structure and format of a webpage.</li>
+                <li>CSS: Styling a webpage's appearance.</li>
+                <li>Git: Version control and collaboration tools.</li>
+                <li>JavaScript: Making webpages interactive.</li>
             </ul>
-        </section>
-
-        <section id="css">
-            <h2>CSS</h2>
-            <ul>
-                <li>CSS styles the appearance of web pages.</li>
-                <li>It controls layout, fonts, and colors.</li>
-            </ul>
-        </section>
-
-        <section id="git">
-            <h2>Git</h2>
-            <ul>
-                <li>Git tracks changes in your projects.</li>
-                <li>It allows for version control and collaboration.</li>
-            </ul>
-        </section>
-
-        <section id="javascript">
-            <h2>JavaScript</h2>
-            <ul>
-                <li>JavaScript makes web pages interactive.</li>
-                <li>It can change HTML and CSS dynamically.</li>
-            </ul>
+            <div id="suggestion">
+                <h3>Suggested Topic to Study First:</h3>
+                <p id="study-suggestion"></p>
+            </div>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2024 Prework Study Guide</p>
     </footer>
+
+    <script>
+        // JavaScript logic to suggest which topic to study first
+        const topics = ['HTML', 'CSS', 'Git', 'JavaScript'];
+        
+        function suggestStudyTopic() {
+            const randomIndex = Math.floor(Math.random() * topics.length);
+            return topics[randomIndex];
+        }
+
+        document.getElementById('study-suggestion').textContent = suggestStudyTopic();
+    </script>
 </body>
 </html>

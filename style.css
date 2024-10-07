@@ -3,7 +3,9 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes up full height */
 }
 
 header {
@@ -18,9 +20,7 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
+    margin-top: auto; /* Pushes the footer to the bottom */
 }
 
 h1 {
@@ -28,21 +28,8 @@ h1 {
 }
 
 main {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    flex-wrap: wrap;
+    flex: 1; /* Main content grows to fill available space */
     margin: 20px;
-    min-height: calc(100vh - 160px); /* Adjust for header/footer */
-}
-
-section {
-    background-color: white;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 10px;
-    width: 200px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
@@ -57,6 +44,24 @@ ul {
 
 li {
     margin: 10px 0;
+    font-size: 1.2em;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#suggestion {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #e0f7fa;
+    border: 1px solid #00796b;
+}
+
+#suggestion h3 {
+    color: #00796b;
 }
 
 footer p {
@@ -66,12 +71,11 @@ footer p {
 
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
-    main {
-        flex-direction: column;
-        align-items: center;
+    ul {
+        padding: 0;
     }
 
-    section {
-        width: 90%;
+    li {
+        font-size: 1.1em;
     }
 }
